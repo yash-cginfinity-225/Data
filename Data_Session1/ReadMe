@@ -1,0 +1,31 @@
+---
+
+## 🕸️ Web Scraping & Encryption Report
+
+### 1. Description of the Website Scraped
+- **Website**: [Books to Scrape](http://books.toscrape.com)
+- **Purpose**: A mock e-commerce site designed for practicing web scraping. It contains book listings with metadata such as title, price, and rating.
+- **Content Type**: Publicly available HTML pages listing books in a catalog format.
+
+### 2. Fields Extracted
+- **Title**: Extracted from the `title` attribute of the book anchor tag.
+- **Price**: Retrieved from the `.price_color` CSS class.
+- **Rating**: Parsed from the `class` attribute of the `p.star-rating` tag (e.g., "Three", "Five").
+
+### 3. Security Approach Used
+- **User-Agent Spoofing**: A standard browser user-agent string (`Mozilla/5.0`) was used to avoid bot detection.
+- **Rate Limiting**: A `time.sleep(1)` delay was added between page requests to reduce server load and mimic human browsing.
+- **Encryption**:
+  - **Library Used**: `cryptography.fernet`
+  - **Key Generation**: A symmetric key was generated and stored in `secret.key`.
+  - **File Encryption**: The `books.csv` file was encrypted into `books_encrypted.bin`.
+  - **Decryption**: The encrypted file was decrypted back into `books_decrypted.csv` for verification.
+
+### 4. Ethical Considerations
+- ✅ **robots.txt Respect**: The site is explicitly built for scraping practice, and its `robots.txt` allows crawling.
+- ✅ **Scraping Limits**: Only 2 pages were scraped, with respectful delays.
+- ✅ **No Authentication Required**: All data was publicly accessible.
+- ✅ **No Commercial Use**: Data was used for educational purposes only.
+- ✅ **Transparency**: Encryption ensures data security and integrity during storage and transmission.
+
+---
