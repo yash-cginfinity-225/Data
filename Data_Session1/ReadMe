@@ -1,0 +1,19 @@
+#Book Scraper & Encryption Tool
+---
+This project scrapes book data from Books to Scrape, stores it in a CSV file, and securely encrypts the file using Fernet symmetric encryption.
+---
+# 🔧 Features
+- Extracts book titles, prices, and ratings from multiple pages
+- Saves structured data to a CSV file
+- Encrypts and decrypts the file using a secure key
+- Uses polite scraping practices with error handling
+---
+# 🛠 Requirements
+---
+- Python 3.x
+- Libraries: requests, beautifulsoup4, pandas, cryptography
+---
+# 📌 Notes
+- The encryption key is stored separately and must be kept safe
+- Decrypted files can be previewed using pandas
+- Intended for educational and demonstration purposes
